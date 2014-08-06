@@ -230,7 +230,8 @@ victual: all
 
 install: all
 	@echo Flashing
-	st-flash write build/$(PROJECT).bin 0x8000000
+	#st-flash write build/$(PROJECT).bin 0x8000000
+	openocd -f ../debug/openocd-program.cfg
 
 reset:
 	@echo Reset
